@@ -722,6 +722,7 @@ margin-bottom: 9px;
 {
    
 } 
+
 .title-join{
 font-weight: 700;
 font-size: 14px;
@@ -729,6 +730,7 @@ line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--logo-text-white);
+margin-bottom: 20px;
 }
 .footer-social-list{
     display: flex;
@@ -740,12 +742,71 @@ color: var(--logo-text-white);
     .footer-bg-icon{
         background-color:rgba(255, 255, 255, .1);
     }
-    .title-join{
-        margin-bottom: 20px;
-    }
+    
     .footer-contact{
         margin-right: 70px;
     }
+
+.footer-send{
+    margin-left: 93px;
+}
+
+
+    .footer-send input
+    {
+        margin: 0;
+        padding: 15px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        background-color:var(--hero-footer-color);
+        width: 358px;
+    }
+    
+    .label-send{
+        display: inline-block;
+
+    }
+
+.button-send{
+        
+    margin-left: 12px;
+   
+    display: flex;
+    align-items: center;
+    
+}
+
+.button-submit{
+position: absolute;
+top: 491px;
+left: 50%;
+transform: translateX(-50%);
+}
+.button-send:hover,
+.button-send:focus
+{
+    background-color: #188CE8;
+
+}
+
+.send-icon{
+    width: 24px;
+    height: 24px;
+    fill: var(--bgc-main);
+    margin-left: 10px;
+}
+.footer-send-field{
+display: flex;
+justify-content: baseline;
+}
+
+
 
  .portfolio-link:hover .project-description,
  .portfolio-link:focus .project-description
@@ -891,17 +952,28 @@ color: var(--title-text-color);
 display: flex;
 flex-direction: column;
 margin-bottom: 10px;
+
+position: relative;
 }
 .form-field input
-{
+{  
+  
     margin: 0;
-    padding: 11px 12px;
+    padding: 12px 12px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
+}
+.icon-modal{
+    position: absolute;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    top: 29px;
+    left: 12px;
 }
 
 .comment{
@@ -920,12 +992,7 @@ letter-spacing: 0.01em;
 }
 
 
-.form-field input::placeholder {
-    /* font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5); */
-    
+   
 }
 .link-order{
 color: var(--accent-text-color);
@@ -934,8 +1001,8 @@ text-decoration: underline;
 
 
 .form-field-check{
-    /* display: flex;
-flex-direction: row; */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .app-thumb{
     position: relative;
