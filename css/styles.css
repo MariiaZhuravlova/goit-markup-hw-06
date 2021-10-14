@@ -748,11 +748,14 @@ margin-bottom: 20px;
     }
 
 .footer-send{
-    margin-left: 93px;
+    margin-left: auto;
 }
 
-
-    .footer-send input
+.footer-send-field{
+    display: flex;
+    justify-content: baseline;
+    }
+    .footer-send-field input
     {
         margin: 0;
         padding: 15px 16px;
@@ -763,11 +766,20 @@ margin-bottom: 20px;
         font-size: 16px;
         line-height: 1.25;
         letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
-        background-color:var(--hero-footer-color);
+        color: var(--text-color-white);
+        background-color:transparent;
         width: 358px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     }
-    
+    .footer-send-field input::placeholder{
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .footer-send input:focus{
+        outline: none;
+        border: 1px solid var(--accent-text-color);
+
+    }
     .label-send{
         display: inline-block;
 
@@ -776,17 +788,17 @@ margin-bottom: 20px;
 .button-send{
         
     margin-left: 12px;
-   
     display: flex;
+    justify-content: center;
     align-items: center;
-    
+
+   
 }
 
 .button-submit{
-position: absolute;
-top: 491px;
-left: 50%;
-transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+
 }
 .button-send:hover,
 .button-send:focus
@@ -795,25 +807,20 @@ transform: translateX(-50%);
 
 }
 
-.send-icon{
+.send-icon
+{
     width: 24px;
     height: 24px;
     fill: var(--bgc-main);
     margin-left: 10px;
 }
-.footer-send-field{
-display: flex;
-justify-content: baseline;
-}
-
-
 
  .portfolio-link:hover .project-description,
  .portfolio-link:focus .project-description
- {
+    {
     transform: translateY(0);
     opacity: 1;
-}
+    }
 /*
 .project-thumb:hover::before{
     opacity: 1;
@@ -834,7 +841,7 @@ justify-content: baseline;
     position: relative;
     overflow: hidden;
     
-}
+    }
 
  .project-description{
     
@@ -921,6 +928,7 @@ justify-content: baseline;
     width: 18px;
     height: 18px;
     fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title{
    font-weight: 700;
@@ -947,16 +955,55 @@ font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.label-check span{
+    
+width: 16px;
+height: 15px;
+border: 2px solid var(--primary-text-color);
+border-radius: 3px;
+margin-right: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+.check-box:checked + .label-check span
+{
+background-color: var(--accent-text-color);
+border-color: var(--accent-text-color);
+}
+.check-box:focus + .label-check span,
+.label-check span:hover,
+.label-check span:focus
+{
+    border-color: var(--accent-text-color);
+}
+.icon-check{
+    
+}
+
+.link-order{
+    color: var(--accent-text-color);
+    text-decoration: underline;
+    display: inline;
+    }
+
 .form-field{
-display: flex;
-flex-direction: column;
+
 margin-bottom: 10px;
-position: relative;
+
+}
+.input-wripper{
+    position: relative;
 }
 .input-field
-{  
+{  width: 100%;
     margin: 0;
     padding: 12px 12px 12px 39px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -966,32 +1013,35 @@ position: relative;
     line-height: 1.14;
     letter-spacing: 0.01em;
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-field:hover,
+
 .input-field:focus
 {
     border-color: var(--accent-text-color);
 }
-.input-field:hover ~ .icon-modal,
+
 .input-field:focus ~ .icon-modal
 {
 fill: var(--accent-text-color);
 }
 
-
-
 .icon-modal{
     position: absolute;
-    top: 32px;
+    top: 50%;
     left: 15px;
-
-    display: inline-block;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment{
     padding: 12px;
     
 }
+
 .form-field textarea::placeholder{
     
     font-size: 14px;
@@ -1000,17 +1050,8 @@ fill: var(--accent-text-color);
     color: rgba(117, 117, 117, 0.5);
 }
 
-
-
-.link-order{
-color: var(--accent-text-color);
-text-decoration: underline;
-display: inline;
-}
-
-
 .form-field-check{
-    margin-top: 20px;
+    padding-top: 10px;
     margin-bottom: 30px;
 }
 .app-thumb{
