@@ -796,6 +796,8 @@ margin-bottom: 20px;
 }
 
 .button-submit{
+
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 
@@ -995,17 +997,20 @@ border-color: var(--accent-text-color);
     }
 
 .form-field{
-
 margin-bottom: 10px;
-
 }
+.form-field-comment{
+
+    margin-bottom: 20px;
+    
+    }
 .input-wripper{
     position: relative;
 }
 .input-field
-{  width: 100%;
-    margin: 0;
-    padding: 12px 12px 12px 39px;
+{   width: 100%;
+    margin-top: 4px;
+    padding: 12px 12px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -1030,6 +1035,9 @@ fill: var(--accent-text-color);
 
 .icon-modal{
     position: absolute;
+
+    height: 18px;
+    width: 18px;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
@@ -1050,31 +1058,30 @@ fill: var(--accent-text-color);
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field-check{
-    padding-top: 10px;
-    margin-bottom: 30px;
-}
 .app-thumb{
     position: relative;
     overflow: hidden;
-}
-
- .app-title{
     
-    padding-top: 27px;
-    padding-bottom: 27px;
-        
+}
+.position-title
+ {
     position: absolute;
     bottom: 0;
              
     width: 100%;
     height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.app-title{
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.17;
-    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--text-color-white);
-    background-color: rgba(47, 48, 58, 0.8);
-} 
+}
