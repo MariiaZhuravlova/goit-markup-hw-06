@@ -976,7 +976,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .check-box:checked + .label-check span
 {
 background-color: var(--accent-text-color);
-
+border-color: var(--accent-text-color);
 }
 .check-box:focus + .label-check span,
 .label-check span:hover,
