@@ -979,6 +979,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 {
 background-color: var(--accent-text-color);
 border-color: var(--accent-text-color);
+
 }
 .check-box:focus + .label-check span,
 .label-check span:hover,
@@ -987,7 +988,12 @@ border-color: var(--accent-text-color);
     border-color: var(--accent-text-color);
 }
 .icon-check{
+
     
+}
+
+.check-box:not(:checked):focus + .label-check span{
+    border-color: var(--primary-text-color);
 }
 
 .link-order{
